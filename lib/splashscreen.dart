@@ -30,3 +30,28 @@ class Splashscreen extends StatelessWidget {
                 ),
               ],
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/login');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+
+                minimumSize: Size(30, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                elevation: 2,
+              ),
+              child: Text(
+                "GET START",
+                style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 40),
+              ),
+            ),
+            Image(image: AssetImage("./assets/image1.png"), fit: BoxFit.cover),
+          ],
+        ),
+      ),
+    );
+  }
+}
