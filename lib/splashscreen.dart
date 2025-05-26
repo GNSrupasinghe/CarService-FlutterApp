@@ -30,6 +30,7 @@ class Splashscreen extends StatelessWidget {
                 ),
               ],
             ),
+
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/login');
