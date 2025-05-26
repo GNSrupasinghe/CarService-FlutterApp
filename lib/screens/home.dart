@@ -56,3 +56,47 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+
+            SizedBox(height: 20),
+
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: const Color.fromARGB(94, 0, 0, 0)),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              width: width * 0.95,
+              height: 160,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Image(image: AssetImage("./assets/contactus.png")),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+
+                      minimumSize: Size(30, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      elevation: 2,
+                    ),
+                    child: Text(
+                      "Contact US",
+                      style: GoogleFonts.jockeyOne(
+                        color: Colors.white,
+                        fontSize: 40,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
