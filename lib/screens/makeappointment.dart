@@ -147,3 +147,154 @@ class _makeappointmentState extends State<makeappointment> {
                 ),
               ],
             ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("12- 13");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "12 - 13",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("13- 14");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "13- 14",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("15- 16");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "15 - 16",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("16- 17");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "16 - 17",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("17- 18");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "17- 18",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    detail.settimeslot("18- 19");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+
+                    minimumSize: Size(30, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    elevation: 2,
+                  ),
+                  child: Text(
+                    "18 - 19",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
