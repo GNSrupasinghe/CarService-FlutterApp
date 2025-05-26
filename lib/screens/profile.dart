@@ -25,6 +25,7 @@ class profile extends StatelessWidget {
     }
     return null;
   }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -152,6 +153,7 @@ class profile extends StatelessWidget {
               ),
             );
           }
+
           final userData = snapshot.data!;
           final username = userData['username'] ?? "No username available";
           final phoneNumber = userData['phone'] ?? "No phone number available";
@@ -276,6 +278,7 @@ class profile extends StatelessWidget {
       ),
     );
   }
+
   Widget drawerItem({
     required IconData icon,
     required String text,
