@@ -26,6 +26,7 @@ class History extends StatelessWidget {
       return [];
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,7 +134,8 @@ class History extends StatelessWidget {
           ),
         ),
       ),
- body: FutureBuilder<List<Map<String, dynamic>>>(
+
+      body: FutureBuilder<List<Map<String, dynamic>>>(
         future: getUserServiceData(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -225,3 +227,27 @@ class History extends StatelessWidget {
       ),
     );
   }
+
+  Widget drawerItem({
+    required IconData icon,
+    required String text,
+    required VoidCallback onTap,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Row(
+          children: [
+            Icon(icon, size: 40),
+            SizedBox(width: 15),
+            Text(
+              text,
+              style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 30),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
