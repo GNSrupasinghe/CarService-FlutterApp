@@ -49,6 +49,7 @@ class mechanic extends StatelessWidget {
                 ),
               ),
             ),
+
             SizedBox(height: 10),
             InkWell(
               onTap: () {
@@ -110,3 +111,71 @@ class mechanic extends StatelessWidget {
                 ),
               ),
             ),
+
+            SizedBox(height: 10),
+            InkWell(
+              onTap: () {
+                detail.setmechanic("MECHANIC 4 (Lazzy)");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color.fromARGB(94, 0, 0, 0)),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                width: width * 0.95,
+                height: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(Icons.people, color: Colors.amber, size: 40),
+                    SizedBox(width: 10),
+                    Text(
+                      "MECHANIC 4 (Lazzy)",
+                      style: GoogleFonts.jockeyOne(
+                        color: Colors.amber,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            InkWell(
+              onTap: () {
+                detail.setmechanic("MECHANIC 5 (Wikz)");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color.fromARGB(94, 0, 0, 0)),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                width: width * 0.95,
+                height: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(Icons.people, color: Colors.amber, size: 40),
+                    SizedBox(width: 10),
+                    Text(
+                      "MECHANIC 5 (Wikz)",
+                      style: GoogleFonts.jockeyOne(
+                        color: Colors.amber,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
