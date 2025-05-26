@@ -152,3 +152,127 @@ class profile extends StatelessWidget {
               ),
             );
           }
+          final userData = snapshot.data!;
+          final username = userData['username'] ?? "No username available";
+          final phoneNumber = userData['phone'] ?? "No phone number available";
+
+          return Center(
+            child: Column(
+              children: [
+                SizedBox(height: width * 0.05),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(94, 0, 0, 0),
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  width: width * 0.95,
+                  height: 450,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "USER DETAILS",
+                        style: GoogleFonts.jockeyOne(
+                          color: Colors.black,
+                          fontSize: 25,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.supervised_user_circle,
+                            size: 50,
+                            color: Colors.amber,
+                          ),
+
+                          Text(
+                            "  Details  ____________________",
+                            style: GoogleFonts.jockeyOne(
+                              color: Colors.black,
+                              fontSize: 25,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        thickness: 1,
+                        indent: 6, // left space
+                        endIndent: 10, // right space
+                      ),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "USER NAME",
+                            style: GoogleFonts.jockeyOne(
+                              color: Colors.black,
+                              fontSize: 25,
+                            ),
+                          ),
+                          Text(
+                            username,
+                            style: GoogleFonts.jockeyOne(
+                              color: const Color.fromARGB(255, 97, 92, 92),
+                              fontSize: 24,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(height: width * 0.05),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Email",
+                            style: GoogleFonts.jockeyOne(
+                              color: Colors.black,
+                              fontSize: 25,
+                            ),
+                          ),
+                          Text(
+                            auth.currentUser!.email.toString(),
+                            style: GoogleFonts.jockeyOne(
+                              color: const Color.fromARGB(255, 97, 92, 92),
+                              fontSize: 24,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(height: width * 0.05),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "PHONE",
+                            style: GoogleFonts.jockeyOne(
+                              color: Colors.black,
+                              fontSize: 25,
+                            ),
+                          ),
+                          Text(
+                            phoneNumber,
+                            style: GoogleFonts.jockeyOne(
+                              color: const Color.fromARGB(255, 97, 92, 92),
+                              fontSize: 24,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
