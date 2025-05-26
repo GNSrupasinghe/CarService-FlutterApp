@@ -14,7 +14,6 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
-
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -52,3 +51,12 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyA3_aIlIaJ10G-NVY7jvg3ml5i6G2_LrHU',
+    appId: '1:798811601712:android:dabb33f5fa92a6e24e66f5',
+    messagingSenderId: '798811601712',
+    projectId: 'car-service-app-4954a',
+    storageBucket: 'car-service-app-4954a.firebasestorage.app',
+  );
+}
