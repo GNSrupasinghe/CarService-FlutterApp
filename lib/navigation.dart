@@ -35,3 +35,16 @@ class _NavigationpagesState extends State<Navigationpages> {
             myIndex = index;
           });
         },
+        currentIndex: myIndex,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.history), label: 'HIstory'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.supervised_user_circle),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
